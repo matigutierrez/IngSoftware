@@ -13,7 +13,7 @@ public class Dispensadora {
         this.dinero = dinero;
     }
 
-    public void dispensarDinero(int dinero) {
+    private void dispensarDinero(int dinero) {
         System.out.println("Su vuelto es de $" + dinero);
     }
 
@@ -23,28 +23,28 @@ public class Dispensadora {
         int codproducto = seleccionarProducto();
 
         for (int i = 0; i < productos.size(); i++) {
-            if(productos.get(i).codigo == codproducto){
+            if(productos.get(i).getCodigo() == codproducto){
                 this.dinero = calculadora.suma(this.dinero, dineroreciv);
-                this.dinero = calculadora.resta(dineroreciv, productos.get(i).precio);
-                dispensarDinero(calculadora.resta(dineroreciv, productos.get(i).precio));
+                this.dinero = calculadora.resta(dineroreciv, productos.get(i).getPrecio());
+                dispensarDinero(calculadora.resta(dineroreciv, productos.get(i).getPrecio()));
                 productos.remove(i);
                 break;
             }
         }
     }
 
-    public int recibirDinero() {
+    private int recibirDinero() {
         Scanner entrada = new Scanner(System.in);
         System.out.println("Ingrese el monto");
-        int monto = entrada.nextInt();
+        int monto = Integer.parseInt(entrada.nextLine());
 
         return monto;
     }
 
-    public int seleccionarProducto() {
+    private int seleccionarProducto() {
         Scanner entrada = new Scanner(System.in);
         System.out.println("Ingrese el Codigo");
-        int codproducto = entrada.nextInt();
+        int codproducto = Integer.parseInt(entrada.nextLine());
 
         return codproducto;
     }
@@ -52,7 +52,7 @@ public class Dispensadora {
     public void verProductos(ArrayList<Producto> productos) {
 
         for (int i = 0; i < productos.size(); i++) {
-            System.out.println(productos.get(i).nombre);
+            System.out.println(productos.get(i).getNombre());
         }
     }
 }

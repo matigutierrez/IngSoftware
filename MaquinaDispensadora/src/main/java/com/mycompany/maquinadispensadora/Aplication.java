@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author pguti
  */
-public class Main {
+public class Aplication {
     
     public static void main(String[] args) {
         Dispensadora dispensadora = new Dispensadora("Vilcun", 100000);
