@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Dispensadora {
-    
+
     private String marca;
     private int dinero;
 
@@ -35,7 +35,7 @@ public class Dispensadora {
 
     private int recibirDinero() {
         Scanner entrada = new Scanner(System.in);
-        System.out.println("Ingrese el monto");
+        System.out.println("Ingrese el Dinero");
         int monto = Integer.parseInt(entrada.nextLine());
 
         return monto;
@@ -43,7 +43,7 @@ public class Dispensadora {
 
     private int seleccionarProducto() {
         Scanner entrada = new Scanner(System.in);
-        System.out.println("Ingrese el Codigo");
+        System.out.println("Ingrese el Codigo \n 1.-Super8 2.- Golazo 3.-Chocman");
         int codproducto = Integer.parseInt(entrada.nextLine());
 
         return codproducto;
@@ -52,7 +52,7 @@ public class Dispensadora {
     public void verProductos(ArrayList<Producto> productos) {
 
         for (int i = 0; i < productos.size(); i++) {
-            System.out.println(productos.get(i).getNombre());
+            System.out.println("-" + productos.get(i).getNombre() + "-" + productos.get(i).getPrecio() + "-" + productos.get(i).getCodigo());
         }
     }
 }

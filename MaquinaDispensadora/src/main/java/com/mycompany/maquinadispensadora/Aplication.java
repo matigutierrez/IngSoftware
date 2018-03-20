@@ -23,9 +23,9 @@ public class Aplication {
         productos.add(new Producto("Golazo", 300, 2));
         productos.add(new Producto("Chocman", 200, 3));
         
-        dispensadora.dispensarProducto(productos);
-        
         dispensadora.verProductos(productos);
+        
+        dispensadora.dispensarProducto(productos);
         
     }
 }
