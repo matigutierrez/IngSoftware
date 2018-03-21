@@ -35,7 +35,7 @@ public class Dispensadora {
 
     private int recibirDinero() {
         Scanner entrada = new Scanner(System.in);
-        System.out.println("Ingrese el Dinero");
+        System.out.println("Ingrese el Dinero(Ingreso Numerico)");
         int monto = Integer.parseInt(entrada.nextLine());
 
         return monto;
@@ -52,7 +52,7 @@ public class Dispensadora {
     public void verProductos(ArrayList<Producto> productos) {
 
         for (int i = 0; i < productos.size(); i++) {
-            System.out.println("-" + productos.get(i).getNombre() + "-" + productos.get(i).getPrecio() + "-" + productos.get(i).getCodigo());
+            System.out.println("Nombre: " + productos.get(i).getNombre() + " - Precio: " + productos.get(i).getPrecio() + " - Codigo: " + productos.get(i).getCodigo());
         }
     }
 }
