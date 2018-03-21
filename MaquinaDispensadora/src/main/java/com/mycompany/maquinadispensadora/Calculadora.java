@@ -1,6 +1,8 @@
 package com.mycompany.maquinadispensadora;
 
 public class Calculadora {
+
+    public Calculadora() {}
     
     public int resta(int num1 , int num2) {
         
